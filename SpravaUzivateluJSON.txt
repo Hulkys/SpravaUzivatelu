@@ -1,0 +1,6 @@
+{
+"Jméno": "Ondřej",
+"Heslo": "heslo",
+"Role": "admin",
+"Datum Registrace": "1.1.2025"
+}
