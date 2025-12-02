@@ -28,137 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNazev = new System.Windows.Forms.Label();
-            this.lblRegistrace = new System.Windows.Forms.Label();
-            this.tbUzivatelskeJmeno = new System.Windows.Forms.TextBox();
-            this.tbHeslo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblLogIn = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbRole = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrace));
+            this.labelregistrace = new System.Windows.Forms.Label();
+            this.textboxusername = new System.Windows.Forms.TextBox();
+            this.textboxpassword = new System.Windows.Forms.TextBox();
+            this.labelusername = new System.Windows.Forms.Label();
+            this.labelpassword = new System.Windows.Forms.Label();
+            this.labellogin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblNazev
+            // labelregistrace
             // 
-            this.lblNazev.AutoSize = true;
-            this.lblNazev.Location = new System.Drawing.Point(12, 9);
-            this.lblNazev.Name = "lblNazev";
-            this.lblNazev.Size = new System.Drawing.Size(113, 13);
-            this.lblNazev.TabIndex = 0;
-            this.lblNazev.Text = "SPRÁVA UŽIVATELŮ";
-            this.lblNazev.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelregistrace.AutoSize = true;
+            this.labelregistrace.Location = new System.Drawing.Point(346, 85);
+            this.labelregistrace.Name = "labelregistrace";
+            this.labelregistrace.Size = new System.Drawing.Size(76, 13);
+            this.labelregistrace.TabIndex = 1;
+            this.labelregistrace.Text = "REGISTRACE";
             // 
-            // lblRegistrace
+            // textboxusername
             // 
-            this.lblRegistrace.AutoSize = true;
-            this.lblRegistrace.Location = new System.Drawing.Point(296, 84);
-            this.lblRegistrace.Name = "lblRegistrace";
-            this.lblRegistrace.Size = new System.Drawing.Size(76, 13);
-            this.lblRegistrace.TabIndex = 1;
-            this.lblRegistrace.Text = "REGISTRACE";
+            this.textboxusername.Location = new System.Drawing.Point(334, 145);
+            this.textboxusername.Name = "textboxusername";
+            this.textboxusername.Size = new System.Drawing.Size(100, 20);
+            this.textboxusername.TabIndex = 2;
             // 
-            // tbUzivatelskeJmeno
+            // textboxpassword
             // 
-            this.tbUzivatelskeJmeno.Location = new System.Drawing.Point(299, 124);
-            this.tbUzivatelskeJmeno.Name = "tbUzivatelskeJmeno";
-            this.tbUzivatelskeJmeno.Size = new System.Drawing.Size(100, 20);
-            this.tbUzivatelskeJmeno.TabIndex = 2;
+            this.textboxpassword.Location = new System.Drawing.Point(334, 202);
+            this.textboxpassword.Name = "textboxpassword";
+            this.textboxpassword.Size = new System.Drawing.Size(100, 20);
+            this.textboxpassword.TabIndex = 3;
             // 
-            // tbHeslo
+            // labelusername
             // 
-            this.tbHeslo.Location = new System.Drawing.Point(299, 176);
-            this.tbHeslo.Name = "tbHeslo";
-            this.tbHeslo.Size = new System.Drawing.Size(100, 20);
-            this.tbHeslo.TabIndex = 3;
+            this.labelusername.AutoSize = true;
+            this.labelusername.Location = new System.Drawing.Point(356, 117);
+            this.labelusername.Name = "labelusername";
+            this.labelusername.Size = new System.Drawing.Size(56, 13);
+            this.labelusername.TabIndex = 4;
+            this.labelusername.Text = "username:";
             // 
-            // label3
+            // labelpassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(296, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "username:";
+            this.labelpassword.AutoSize = true;
+            this.labelpassword.Location = new System.Drawing.Point(356, 177);
+            this.labelpassword.Name = "labelpassword";
+            this.labelpassword.Size = new System.Drawing.Size(55, 13);
+            this.labelpassword.TabIndex = 5;
+            this.labelpassword.Text = "password:";
             // 
-            // label4
+            // labellogin
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(297, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "password:";
+            this.labellogin.AutoSize = true;
+            this.labellogin.Location = new System.Drawing.Point(319, 240);
+            this.labellogin.Name = "labellogin";
+            this.labellogin.Size = new System.Drawing.Size(115, 13);
+            this.labellogin.TabIndex = 6;
+            this.labellogin.Text = "Už máte účet? LOG IN";
+            this.labellogin.Click += new System.EventHandler(this.lblLogIn_Click);
             // 
-            // lblLogIn
+            // pictureBox1
             // 
-            this.lblLogIn.AutoSize = true;
-            this.lblLogIn.Location = new System.Drawing.Point(297, 273);
-            this.lblLogIn.Name = "lblLogIn";
-            this.lblLogIn.Size = new System.Drawing.Size(115, 13);
-            this.lblLogIn.TabIndex = 6;
-            this.lblLogIn.Text = "Už máte účet? LOG IN";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(807, 457);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(746, 428);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "ADMIN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "role:";
-            // 
-            // tbRole
-            // 
-            this.tbRole.Location = new System.Drawing.Point(299, 231);
-            this.tbRole.Name = "tbRole";
-            this.tbRole.Size = new System.Drawing.Size(100, 20);
-            this.tbRole.TabIndex = 8;
-            // 
-            // Form1
+            // Registrace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbRole);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblLogIn);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbHeslo);
-            this.Controls.Add(this.tbUzivatelskeJmeno);
-            this.Controls.Add(this.lblRegistrace);
-            this.Controls.Add(this.lblNazev);
-            this.Name = "Form1";
+            this.Controls.Add(this.labellogin);
+            this.Controls.Add(this.labelpassword);
+            this.Controls.Add(this.labelusername);
+            this.Controls.Add(this.textboxpassword);
+            this.Controls.Add(this.textboxusername);
+            this.Controls.Add(this.labelregistrace);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "Registrace";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Registrace_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNazev;
-        private System.Windows.Forms.Label lblRegistrace;
-        private System.Windows.Forms.TextBox tbUzivatelskeJmeno;
-        private System.Windows.Forms.TextBox tbHeslo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblLogIn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbRole;
+        private System.Windows.Forms.Label labelregistrace;
+        private System.Windows.Forms.TextBox textboxusername;
+        private System.Windows.Forms.TextBox textboxpassword;
+        private System.Windows.Forms.Label labelusername;
+        private System.Windows.Forms.Label labelpassword;
+        private System.Windows.Forms.Label labellogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
