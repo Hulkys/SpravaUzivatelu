@@ -16,5 +16,10 @@ namespace SpravaUzivatelu
         {
             InitializeComponent();
         }
+
+        private void lblLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
