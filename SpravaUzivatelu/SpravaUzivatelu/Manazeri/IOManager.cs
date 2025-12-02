@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace SpravaUzivatelu.Manazeri
 {
@@ -14,7 +14,7 @@ namespace SpravaUzivatelu.Manazeri
 
         public static void SaveUsers(List<Uzivatel> users)
         {
-            var json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
+            var json = JsonConvert.SerializeObject(users, Formatting.Indented);
             File.WriteAllText(path, json);
         }
 
@@ -22,7 +22,7 @@ namespace SpravaUzivatelu.Manazeri
         {
             if (!File.Exists(path)) return new List<Uzivatel>();
             var json = File.ReadAllText(path);
-            return JsonSerializer.Deserialize<List<Uzivatel>>(json) ?? new List<Uzivatel>();
+            return JsonConvert.DeserializeObject<List<Uzivatel>>(json) ?? new List<Uzivatel>();
         }
     }
 }
