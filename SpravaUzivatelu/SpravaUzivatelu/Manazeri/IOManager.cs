@@ -10,7 +10,7 @@ namespace SpravaUzivatelu.Manazeri
 {
     internal class IOManager
     {
-        private static readonly string path = Path.Combine(AppContext.BaseDirectory, "Z:\\PRG 3\\SpravaUzivatelu");
+        private static readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory);
 
         public static void SaveUsers(List<Uzivatel> users)
         {
