@@ -1,6 +1,6 @@
 ﻿namespace SpravaUzivatelu
 {
-    partial class Form1
+    partial class Registrace
     {
         /// <summary>
         /// Vyžaduje se proměnná návrháře.
