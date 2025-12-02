@@ -49,6 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pruhlednytextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Registrace.cs">
       <SubType>Form</SubType>
     </Compile>
