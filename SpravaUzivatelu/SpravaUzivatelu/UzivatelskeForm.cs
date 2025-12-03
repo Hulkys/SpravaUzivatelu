@@ -16,5 +16,10 @@ namespace SpravaUzivatelu
         {
             InitializeComponent();
         }
+
+        private void labelregistrace_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
