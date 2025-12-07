@@ -54,7 +54,7 @@ namespace SpravaUzivatelu
             string username = textboxusername.Text;
             string password = textboxpassword.Text;
 
-            UzivatelManager userManager = new UzivatelManager();
+            UserManager userManager = new UserManager();
             bool success = userManager.Register(username, password);
 
             if (success)

@@ -24,15 +24,26 @@ namespace SpravaUzivatelu
         {
             string jmeno = textboxusername.Text;
             string heslo = textboxpassword.Text;
-            UzivatelManager userManager = new UzivatelManager();
+
+            UserManager userManager = new UserManager();
             var uzivatel = userManager.Login(jmeno, heslo);
 
             if (uzivatel != null)
             {
-                Program.LoggedUser = uzivatel;
-                User f = new User();
-                f.Show();
-                this.Hide();
+                Program.LoggedUser = uzivatel; // uložíme aktuálního uživatele
+
+                if (uzivatel.Role == "admin")
+                {
+                    Admin adminForm = new Admin();
+                    adminForm.Show();
+                }
+                else
+                {
+                    User userForm = new User();
+                    userForm.Show();
+                }
+
+                this.Hide(); // skryje login form
             }
             else
             {

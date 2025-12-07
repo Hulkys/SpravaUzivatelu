@@ -8,9 +8,9 @@ namespace SpravaUzivatelu.Manazeri
 {
     internal class ActionManager
     {
-        public UzivatelManager userManager;
+        public UserManager userManager;
 
-        public ActionManager(UzivatelManager um)
+        public ActionManager(UserManager um)
         {
             userManager = um;
         }

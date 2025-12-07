@@ -11,28 +11,29 @@ using System.Text.Json;
 
 namespace SpravaUzivatelu.Manazeri
 {
-    internal class UzivatelManager
+    internal class UserManager
     {
         //ukládá všechny uživatele v paměti - spravuje to manager (registrace, přihlášení, admin)
         private List<Uzivatel> users;
 
-        public UzivatelManager() //spustí se automaticky při vytvoření účtu. 
+        public UserManager() //spustí se automaticky při vytvoření účtu. 
         {
             //načte uživatele ze souboru
-            users = IOManager.LoadUsers();
+            users = IOManager.LoadUsers() ?? new List<Uzivatel>();
 
 
             //zkontroluje, jestli už existuje admin
             if (!users.Any(u => u.Role == "admin"))
             {
                 //Pokud není v seznamu žádný admin, vytvoří se automaticky
-                users.Add(new Uzivatel
+                Uzivatel admin = new Uzivatel
                 {
                     Name = "admin",
                     PasswordHash = Hash("admin"),
                     Role = "admin",
                     Registered = DateTime.Now
-                });
+                };
+                users.Add(admin);
                 IOManager.SaveUsers(users);
             } //aplikace má vždy minimálně jednoho administrátora
         }

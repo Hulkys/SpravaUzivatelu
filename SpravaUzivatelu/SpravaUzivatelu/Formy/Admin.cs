@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SpravaUzivatelu
 {
-    public partial class AdminForm : Form
+    public partial class Admin : Form
     {
-        public AdminForm()
+        public Admin()
         {
             InitializeComponent();
         }

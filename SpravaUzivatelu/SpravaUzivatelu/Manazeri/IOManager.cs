@@ -14,9 +14,8 @@ namespace SpravaUzivatelu.Manazeri
 
         public static void SaveUsers(List<Uzivatel> users)
         {
-            string jsonString = System.Text.Json.JsonSerializer.Serialize(users);
+            string jsonString = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true }); // čitelný JSON
             File.WriteAllText(path, jsonString);
-
         }
 
         public static List<Uzivatel> LoadUsers()
@@ -28,7 +27,7 @@ namespace SpravaUzivatelu.Manazeri
                     return new List<Uzivatel>();
                 }
                 var json = File.ReadAllText(path);
-                var users = System.Text.Json.JsonSerializer.Deserialize<List<Uzivatel>>(json);
+                var users = JsonSerializer.Deserialize<List<Uzivatel>>(json);
                 return users ?? new List<Uzivatel>();
             }
             catch

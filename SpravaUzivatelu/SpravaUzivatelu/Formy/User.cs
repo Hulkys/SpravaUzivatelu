@@ -28,7 +28,7 @@ namespace SpravaUzivatelu
                 MessageBox.Show("Zadejte nové heslo.");
                 return;
             }
-            UzivatelManager um = new UzivatelManager();
+            UserManager um = new UserManager();
             ActionManager actionManager = new ActionManager(um);
 
             bool ok = actionManager.ChangePassword(Program.LoggedUser, newPassword);
