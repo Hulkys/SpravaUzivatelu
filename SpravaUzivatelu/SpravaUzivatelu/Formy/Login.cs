@@ -17,7 +17,6 @@ namespace SpravaUzivatelu
         public Login()
         {
             InitializeComponent();
-            
         }
 
         private void buttonprihlasit_Click(object sender, EventArgs e)

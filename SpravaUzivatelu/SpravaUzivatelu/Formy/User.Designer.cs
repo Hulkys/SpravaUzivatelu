@@ -29,27 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
-            this.labelRegistrace = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBoxZmenitHeslo = new System.Windows.Forms.TextBox();
             this.labelZmenitHeslo = new System.Windows.Forms.Label();
             this.btnZmenit = new System.Windows.Forms.Button();
-            this.labelpassword = new System.Windows.Forms.Label();
-            this.labelusername = new System.Windows.Forms.Label();
-            this.textboxpassword = new System.Windows.Forms.TextBox();
-            this.textboxusername = new System.Windows.Forms.TextBox();
+            this.buttonZpetLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelCurrentUser = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelRegistrace
-            // 
-            this.labelRegistrace.AutoSize = true;
-            this.labelRegistrace.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistrace.Location = new System.Drawing.Point(357, 30);
-            this.labelRegistrace.Name = "labelRegistrace";
-            this.labelRegistrace.Size = new System.Drawing.Size(52, 21);
-            this.labelRegistrace.TabIndex = 19;
-            this.labelRegistrace.Text = "USER";
             // 
             // pictureBox2
             // 
@@ -63,25 +53,26 @@
             // 
             // textBoxZmenitHeslo
             // 
-            this.textBoxZmenitHeslo.Location = new System.Drawing.Point(274, 242);
+            this.textBoxZmenitHeslo.Location = new System.Drawing.Point(286, 194);
             this.textBoxZmenitHeslo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxZmenitHeslo.Name = "textBoxZmenitHeslo";
-            this.textBoxZmenitHeslo.Size = new System.Drawing.Size(222, 20);
+            this.textBoxZmenitHeslo.Size = new System.Drawing.Size(211, 20);
             this.textBoxZmenitHeslo.TabIndex = 21;
             // 
             // labelZmenitHeslo
             // 
             this.labelZmenitHeslo.AutoSize = true;
-            this.labelZmenitHeslo.Location = new System.Drawing.Point(350, 214);
+            this.labelZmenitHeslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelZmenitHeslo.Location = new System.Drawing.Point(322, 88);
             this.labelZmenitHeslo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelZmenitHeslo.Name = "labelZmenitHeslo";
-            this.labelZmenitHeslo.Size = new System.Drawing.Size(65, 13);
+            this.labelZmenitHeslo.Size = new System.Drawing.Size(133, 25);
             this.labelZmenitHeslo.TabIndex = 22;
             this.labelZmenitHeslo.Text = "změnit heslo";
             // 
             // btnZmenit
             // 
-            this.btnZmenit.Location = new System.Drawing.Point(334, 280);
+            this.btnZmenit.Location = new System.Drawing.Point(338, 236);
             this.btnZmenit.Margin = new System.Windows.Forms.Padding(2);
             this.btnZmenit.Name = "btnZmenit";
             this.btnZmenit.Size = new System.Drawing.Size(95, 47);
@@ -90,53 +81,72 @@
             this.btnZmenit.UseVisualStyleBackColor = true;
             this.btnZmenit.Click += new System.EventHandler(this.btnZmenit_Click);
             // 
-            // labelpassword
+            // buttonZpetLogin
             // 
-            this.labelpassword.AutoSize = true;
-            this.labelpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelpassword.Location = new System.Drawing.Point(351, 125);
-            this.labelpassword.Name = "labelpassword";
-            this.labelpassword.Size = new System.Drawing.Size(64, 13);
-            this.labelpassword.TabIndex = 27;
-            this.labelpassword.Text = "password:";
+            this.buttonZpetLogin.Location = new System.Drawing.Point(329, 316);
+            this.buttonZpetLogin.Name = "buttonZpetLogin";
+            this.buttonZpetLogin.Size = new System.Drawing.Size(111, 34);
+            this.buttonZpetLogin.TabIndex = 28;
+            this.buttonZpetLogin.Text = "Zpět na login";
+            this.buttonZpetLogin.UseVisualStyleBackColor = true;
+            this.buttonZpetLogin.Click += new System.EventHandler(this.buttonZpetLogin_Click);
             // 
-            // labelusername
+            // label1
             // 
-            this.labelusername.AutoSize = true;
-            this.labelusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelusername.Location = new System.Drawing.Point(350, 65);
-            this.labelusername.Name = "labelusername";
-            this.labelusername.Size = new System.Drawing.Size(65, 13);
-            this.labelusername.TabIndex = 26;
-            this.labelusername.Text = "username:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(332, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 39);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "USER";
             // 
-            // textboxpassword
+            // label2
             // 
-            this.textboxpassword.Location = new System.Drawing.Point(334, 153);
-            this.textboxpassword.Name = "textboxpassword";
-            this.textboxpassword.Size = new System.Drawing.Size(100, 20);
-            this.textboxpassword.TabIndex = 25;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(286, 177);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "nové heslo:";
             // 
-            // textboxusername
+            // labelCurrentUser
             // 
-            this.textboxusername.Location = new System.Drawing.Point(334, 92);
-            this.textboxusername.Name = "textboxusername";
-            this.textboxusername.Size = new System.Drawing.Size(100, 20);
-            this.textboxusername.TabIndex = 24;
+            this.labelCurrentUser.AutoSize = true;
+            this.labelCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCurrentUser.Location = new System.Drawing.Point(503, 26);
+            this.labelCurrentUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCurrentUser.Name = "labelCurrentUser";
+            this.labelCurrentUser.Size = new System.Drawing.Size(0, 39);
+            this.labelCurrentUser.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(449, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 39);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "---";
             // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.labelpassword);
-            this.Controls.Add(this.labelusername);
-            this.Controls.Add(this.textboxpassword);
-            this.Controls.Add(this.textboxusername);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelCurrentUser);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonZpetLogin);
             this.Controls.Add(this.btnZmenit);
             this.Controls.Add(this.labelZmenitHeslo);
             this.Controls.Add(this.textBoxZmenitHeslo);
-            this.Controls.Add(this.labelRegistrace);
             this.Controls.Add(this.pictureBox2);
             this.Name = "User";
             this.Text = "UzivatelskeForm";
@@ -147,14 +157,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label labelRegistrace;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBoxZmenitHeslo;
         private System.Windows.Forms.Label labelZmenitHeslo;
         private System.Windows.Forms.Button btnZmenit;
-        private System.Windows.Forms.Label labelpassword;
-        private System.Windows.Forms.Label labelusername;
-        private System.Windows.Forms.TextBox textboxpassword;
-        private System.Windows.Forms.TextBox textboxusername;
+        private System.Windows.Forms.Button buttonZpetLogin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCurrentUser;
+        private System.Windows.Forms.Label label3;
     }
 }
