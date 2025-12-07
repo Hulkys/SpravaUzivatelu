@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 
 
 namespace SpravaUzivatelu.Manazeri
@@ -71,7 +71,8 @@ namespace SpravaUzivatelu.Manazeri
             users.Add(um);
             IOManager.SaveUsers(users);
             return true; //Vrací true, pokud je registrace úspěšná
-            string jsonString = JsonSerializer.Serialize(um);
+
+            
         }
         public Uzivatel Login(string name, string password) //přihlášení uživatele
 

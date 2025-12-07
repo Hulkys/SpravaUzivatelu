@@ -1,6 +1,6 @@
 ﻿namespace SpravaUzivatelu
 {
-    partial class UzivatelskeForm
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,76 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UzivatelskeForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelregistrace = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(355, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 47);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Smazat vybrané";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(359, 133);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "smazat uživatele";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(294, 162);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 20);
+            this.textBox1.TabIndex = 26;
             // 
             // labelregistrace
             // 
             this.labelregistrace.AutoSize = true;
             this.labelregistrace.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelregistrace.Location = new System.Drawing.Point(535, 144);
-            this.labelregistrace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelregistrace.Location = new System.Drawing.Point(369, 88);
             this.labelregistrace.Name = "labelregistrace";
-            this.labelregistrace.Size = new System.Drawing.Size(97, 32);
-            this.labelregistrace.TabIndex = 19;
+            this.labelregistrace.Size = new System.Drawing.Size(66, 21);
+            this.labelregistrace.TabIndex = 24;
             this.labelregistrace.Text = "ADMIN";
-            this.labelregistrace.Click += new System.EventHandler(this.labelregistrace_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-24, -3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(-4, -8);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1214, 718);
+            this.pictureBox2.Size = new System.Drawing.Size(809, 467);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // AdminForm
             // 
-            this.textBox1.Location = new System.Drawing.Point(423, 259);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 26);
-            this.textBox1.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(520, 214);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 20);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "smazat uživatele";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(514, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 72);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Smazat vybrané";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // UzivatelskeForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 709);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelregistrace);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "UzivatelskeForm";
-            this.Text = "UzivatelskeForm";
+            this.Name = "AdminForm";
+            this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,10 +104,11 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelregistrace;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }

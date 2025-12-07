@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.buttonprihlasit = new System.Windows.Forms.Button();
-            this.labellogin = new System.Windows.Forms.Label();
+            this.labelNaRegistrovani = new System.Windows.Forms.Label();
             this.labelpassword = new System.Windows.Forms.Label();
             this.labelusername = new System.Windows.Forms.Label();
             this.textboxpassword = new System.Windows.Forms.TextBox();
@@ -47,18 +47,20 @@
             this.buttonprihlasit.Name = "buttonprihlasit";
             this.buttonprihlasit.Size = new System.Drawing.Size(87, 37);
             this.buttonprihlasit.TabIndex = 17;
-            this.buttonprihlasit.Text = "Registrovat";
+            this.buttonprihlasit.Text = "Login";
             this.buttonprihlasit.UseVisualStyleBackColor = true;
+            this.buttonprihlasit.Click += new System.EventHandler(this.buttonprihlasit_Click);
             // 
-            // labellogin
+            // labelNaRegistrovani
             // 
-            this.labellogin.AutoSize = true;
-            this.labellogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labellogin.Location = new System.Drawing.Point(347, 269);
-            this.labellogin.Name = "labellogin";
-            this.labellogin.Size = new System.Drawing.Size(135, 13);
-            this.labellogin.TabIndex = 15;
-            this.labellogin.Text = "Už máte účet? LOG IN";
+            this.labelNaRegistrovani.AutoSize = true;
+            this.labelNaRegistrovani.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNaRegistrovani.Location = new System.Drawing.Point(319, 269);
+            this.labelNaRegistrovani.Name = "labelNaRegistrovani";
+            this.labelNaRegistrovani.Size = new System.Drawing.Size(189, 13);
+            this.labelNaRegistrovani.TabIndex = 15;
+            this.labelNaRegistrovani.Text = "Ještě nemáte účet? Registruj se";
+            this.labelNaRegistrovani.Click += new System.EventHandler(this.labelNaRegistrovani_Click);
             // 
             // labelpassword
             // 
@@ -98,11 +100,11 @@
             // 
             this.labelregistrace.AutoSize = true;
             this.labelregistrace.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelregistrace.Location = new System.Drawing.Point(360, 32);
+            this.labelregistrace.Location = new System.Drawing.Point(380, 30);
             this.labelregistrace.Name = "labelregistrace";
-            this.labelregistrace.Size = new System.Drawing.Size(108, 21);
+            this.labelregistrace.Size = new System.Drawing.Size(62, 21);
             this.labelregistrace.TabIndex = 10;
-            this.labelregistrace.Text = "REGISTRACE";
+            this.labelregistrace.Text = "LOGIN";
             // 
             // pictureBox1
             // 
@@ -120,7 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonprihlasit);
-            this.Controls.Add(this.labellogin);
+            this.Controls.Add(this.labelNaRegistrovani);
             this.Controls.Add(this.labelpassword);
             this.Controls.Add(this.labelusername);
             this.Controls.Add(this.textboxpassword);
@@ -138,7 +140,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonprihlasit;
-        private System.Windows.Forms.Label labellogin;
+        private System.Windows.Forms.Label labelNaRegistrovani;
         private System.Windows.Forms.Label labelpassword;
         private System.Windows.Forms.Label labelusername;
         private System.Windows.Forms.TextBox textboxpassword;

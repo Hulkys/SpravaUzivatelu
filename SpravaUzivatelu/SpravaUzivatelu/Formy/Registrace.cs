@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpravaUzivatelu.Manazeri;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,18 +20,10 @@ namespace SpravaUzivatelu
 
         private void lblLogIn_Click(object sender, EventArgs e)
         {
-
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide(); // zavře Registraci
         }
-
-
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Registrace_Load(object sender, EventArgs e)
         {
 
@@ -54,6 +47,28 @@ namespace SpravaUzivatelu
             {
                 buttonprihlasit.BackColor = Color.White;
             };
+        }
+
+        private void buttonprihlasit_Click(object sender, EventArgs e)
+        {
+            string username = textboxusername.Text;
+            string password = textboxpassword.Text;
+
+            UzivatelManager userManager = new UzivatelManager();
+            bool success = userManager.Register(username, password);
+
+            if (success)
+            {
+                MessageBox.Show("Registrace proběhla úspěšně.");
+                // Po registraci otevřeme Login form
+                Login loginForm = new Login();
+                loginForm.Show();
+                this.Hide(); // zavře registraci
+            }
+            else
+            {
+                MessageBox.Show("Registrace se nepodařila. Jméno je již použito nebo je neplatné.");
+            }
         }
     }
     

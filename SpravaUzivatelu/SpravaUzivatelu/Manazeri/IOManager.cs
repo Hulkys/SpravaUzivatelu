@@ -10,7 +10,7 @@ namespace SpravaUzivatelu.Manazeri
 {
     internal class IOManager
     {
-        private static readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory);
+        private static readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SpravaUzivateluJSON.json");
 
         public static void SaveUsers(List<Uzivatel> users)
         {

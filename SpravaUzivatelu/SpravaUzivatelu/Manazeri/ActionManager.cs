@@ -8,7 +8,7 @@ namespace SpravaUzivatelu.Manazeri
 {
     internal class ActionManager
     {
-        private readonly UzivatelManager userManager;
+        public UzivatelManager userManager;
 
         public ActionManager(UzivatelManager um)
         {
